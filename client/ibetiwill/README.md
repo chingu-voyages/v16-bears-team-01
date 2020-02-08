@@ -26,6 +26,7 @@ newState = [...state, 4, 5];
 </details>
 
 <details><summary>heavily used es6/ts-features</summary>
+### ... 
 - decomposition
 - arrow-synthax
 - array.map()
@@ -99,4 +100,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 </details>
 
 ## Testing 
-We should try to keep up with testing:).
+We should try to keep up with testing:). 
+I already have some good experience with:
+[Jest](https://jestjs.io/) for the 'normal' code - eg Utils.ts ...
+[Enzyme](https://airbnb.io/enzyme/) for the React-Components - eg testing most relevant features of App.tsx
