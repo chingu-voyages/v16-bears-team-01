@@ -1,5 +1,5 @@
 # I bet I will!
-We diceded to host ./client [README](https://github.com/chingu-voyages/v16-bears-team-01/tree/master/client/ibetiwill) and ./server in respectice subdirectories of this one git-repo.
+We diceded to host ./client [README](https://github.com/chingu-voyages/v16-bears-team-01/tree/master/client/ibetiwill) and ./server in respective subdirectories of this one git-repo.
 
 
 ## v16-bears-team-01
