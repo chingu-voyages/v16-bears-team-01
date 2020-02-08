@@ -1,14 +1,14 @@
 # I-bet-I-will
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Typesccript <br />
-(Typescript is a little more work but should be worth. And if it speeds you up with all the helps in VSCode)
 
 <details><summary>some React principles</summary>
-### DOM as function of State
-A React component returns the DOM / html given the State as input.
-ie: ReactComponent = appState => jsx / html
 
-### Unidirectional data flow:
+### DOM as function of State
+- A React component basically returns the DOM / html given the State as input.
+- ie: ReactComponent = appState => jsx / html
+
+### Unidirectional data flow
 - All State is stored in the Top-Component. 
 - Stateful Components are either Classes or Functions with hooks.
 - State is passed to (presentational) child Components via Props.
@@ -17,21 +17,19 @@ ie: ReactComponent = appState => jsx / html
 
 ### Best Practice
 - Small / Single Purpose Components
-- keep State simpel, try to derive most inline, ie with map()
+- keep State simpel, derive/calculate as much as possible
 - create copies of iterables or Objects, never manipulate State inplace.
-ie:
+eg:
 state = [1,2,3];
 newState = [...state, 4, 5];
 
 </details>
 
 <details><summary>heavily used es6/ts-features</summary>
-<p>
 - decomposition
 - arrow-synthax
 - array.map()
 - object.assign() and ...spread
-</p>
 </details>
 
 
