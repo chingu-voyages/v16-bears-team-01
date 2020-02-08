@@ -25,17 +25,16 @@ newState = [...state, 4, 5];
 
 </details>
 
-<details><summary>heavily used es6/ts-features</summary>
-### ... 
-- decomposition
-- arrow-synthax
-- array.map()
-- object.assign() and ...spread
+<details><summary>heavily used es6 / ts-features</summary>
+- decomposition<br />
+- arrow-synthax<br />
+- array.map()<br />
+- object.assign() and ...spread<br />
 </details>
 
 
 ## Installation
-in root-dir [v16-bears-team-01/client/]:
+in root-dir [v16-bears-team-01/client/ibetiwill]:
 ```
 npm install
 ```
