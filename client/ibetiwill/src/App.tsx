@@ -3,8 +3,7 @@ import './App.css';
 import 'antd/dist/antd.css';
 import { Button, Menu, Icon } from 'antd';
 import { InputEvent, Bet, PrimitiveUser } from './common/types';
-import { TextInput, TextList } from './components';
-import { getDayDdMonth, timeAgo } from './common/utils/DatetimeUtils';
+import { TextInput, BetList } from './components';
 
 //testdata: should consider integrating redux maybe:)
 import { Bets } from './data/bets';
@@ -19,7 +18,7 @@ import { Bets } from './data/bets';
 
 
 const App = () => {
-  const [user, setUser] = useState<PrimitiveUser>('Faebe'); //TODO set to null
+  const [user, setUser] = useState<PrimitiveUser>('Chingu'); //TODO set to null
   const [betEvent, setBetEvent] = useState(''); //TODO set to null
   const [bets, setBets] = useState<Bet[]>(Bets);
   return (
@@ -52,14 +51,14 @@ const App = () => {
               <Button
                 onClick={() => {
                   if (betEvent !== '') {
-                    setBets([...bets,  {
+                    setBets([{
                       event: betEvent,
                       date: new Date(),
                       user: user,
                       on: [],
                       against: [],
                       visibility: 'global',
-                    }]);
+                    }, ...bets]);  
                     setBetEvent('');
                   }
                 }}
@@ -78,9 +77,9 @@ const App = () => {
               </Button>
             </div>
             <div className="BetsContainer">
-              <TextList items={bets.map(
-                bet => `bet.event ${getDayDdMonth(bet.date)} | by ${bet.user} | (${timeAgo(bet.date)})`
-              )}/>
+              <BetList 
+                items={bets}
+              />
             </div>
             <footer>
               <p>coded by chingu Bears 01</p>

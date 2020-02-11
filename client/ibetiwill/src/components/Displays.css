@@ -1,13 +1,23 @@
-.DisplayText {
+.Text {
   background-color: LightGreen;
   color: Blue;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .DisplayList {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid Orange;
-  border-radius: 10px;
   padding: 10px;
+  border-radius: 10px;
+}
+
+.DisplayRow {
+  border: 1px solid Orange;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-inbetween;
+  padding: 10px;
+  border-radius: 10px;
 }
