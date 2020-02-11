@@ -25,7 +25,6 @@ export const TextList = ({ items }: TextListProps) => (
           <Text 
             key={i}
             value={text}
-            i={i+1}
           />
         ))
       : <Text value="No Bets placed..."/>
