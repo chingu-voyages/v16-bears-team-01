@@ -49,19 +49,6 @@ const App = () => {
       <div className="BetsContainer">
         <TextList items={bets}/>
       </div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          I bet We will - create an App.
-        </p>
-        <a
-          className="App-Link"
-          href="https://github.com/chingu-voyages/v16-bears-team-01/tree/master/client/ibetiwill"
-          target="_blank"
-        >
-          @Github 
-        </a>
-      </header>
       <footer>
         <p>coded by chingu Bears 01</p>
       </footer>
