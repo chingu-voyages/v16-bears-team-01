@@ -8,11 +8,19 @@ export type InputEventHandler = (arg1: InputEvent) => void;
 export type Visbility = 'global'|'group'|'1on1';
 export type PrimitiveUser = 'Overstand'|'Jan'|'Brendan'|'Faebe'|'Chingu' | null;
 
+export type Action = {
+  id: string,         //for graphql-integration?
+  user: PrimitiveUser,
+  odds: number,
+  amount: number,
+}
+
 export type Bet = {
-  date: Date,
+  id: string,         //for graphql-integration?
   event: string,
   user: PrimitiveUser,
-  on: PrimitiveUser[] | [], //votes believing
-  against: PrimitiveUser[] | [], //votes don't believe' 
+  on: Action[] | [],
+  against: Action[] | [],
   visibility: Visbility,
+  createdOn: Date,
 }
