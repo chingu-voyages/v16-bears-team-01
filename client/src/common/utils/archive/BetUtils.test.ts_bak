@@ -1,0 +1,37 @@
+import { 
+  getActionLengths,
+  oddsOn,
+  oddsAgainst,
+} from '../BetUtils';
+
+import { data } from '../../../fixtures/bets';
+
+test('length of actions to be 2 for on and against', () => {
+  const bet = data[0]
+  const lengths = getActionLengths(bet);
+  expect(bet.on.length).toBe(1);
+  expect(bet.against.length).toBe(2);
+  expect(lengths.on).toBe(2);
+  expect(lengths.against).toBe(2);
+})
+
+
+test('odds should be 2/2 (=1) for both sides', () => {
+  const bet = data[0]
+  expect(oddsOn(bet)).toBe(2/2);
+  expect(oddsAgainst(bet)).toBe(2/2);
+});
+
+test('length of actions to be 1 for new bet', () => {
+  const bet = data[3]
+  const lengths = getActionLengths(bet);
+  expect(bet.user).toMatch(/Faebe/);
+  expect(lengths.on).toBe(1);
+  expect(lengths.against).toBe(1);
+});
+ 
+test('odds should be 1/1 (=1) for both sides for new bet', () => {
+  const bet = data[3]
+  expect(oddsOn(bet)).toBe(1/1);
+  expect(oddsAgainst(bet)).toBe(1/1);
+});
