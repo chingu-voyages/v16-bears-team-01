@@ -36,7 +36,7 @@ export const BetListing = () => {
       </Button>
       <div className="DisplayList">
         {data.length > 0 
-          ? data.map(({ id, goal, on, against, user, created_at }) => (
+          ? data.map(({ id, goal, user, won, createdAt }) => (
             <div 
               key={id}
               className="DisplayRow"
@@ -44,19 +44,22 @@ export const BetListing = () => {
               <div className="Text">{`... ${goal} !`}</div>
               <div className="Text">{`by ${user}`}</div>
               <div className="Text">
-                {`${getDayDdMonth(created_at)} (${timeAgo(created_at)})`}
+                {`${getDayDdMonth(createdAt)} (${timeAgo(createdAt)})`}
               </div>
+              {won &&
+                <div className="Text">'won'</div>
+              }
                 <Button
                   onClick={() => {}}
                   title="bet on the creator"
                 >
-                  {`ON ${on.length})`}
+                  + 
                 </Button>
                 <Button
                   onClick={() => {}}
                   title="bet against the creator"
                 >
-                  {`AGAINST ${against.length})`}
+                 - 
                 </Button>
               </div>
             ))
@@ -87,9 +90,8 @@ export const BetListing = () => {
                     goal: betText,
                     user: 'Chingu',
                     on: [],
-                    against: [],
                     visibility: 'global',
-                    created_at: new Date(),
+                    createdAt: new Date(),
                   }
                 ]);  
                 setBetText('');
