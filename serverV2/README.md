@@ -3,11 +3,23 @@
 Steps to run this project:
 
 1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-   "username": "",
-   "password": "",
-   "database": "",
+
+2. create `.env` file in root-directory
+3. add following 4 lines to `.env` and replace [username], [password], [database] with your setup definitions
+
+`JWT_SECRET=ibetiwill`
+`TYPEORM_USERNAME=user`
+`TYPEORM_PASSWORD=password`
+`TYPEORM_DATABASE=database`
 
 You will need to have the database created on postgresql.
 
-3. Run `npm start` command
+4. Run `npm start` command
+
+## summary of proposed changes / integrations (fb):
+- ormconfig.js instead .json: to hide secrets in .env
+- with graphql-tools: add `schema.ts` to make use of mockServer() to play with data on clientside
+TODO: run mockServer() on clientside ...
+
+## seed db
+npm run seed'
