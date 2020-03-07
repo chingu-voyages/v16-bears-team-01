@@ -17,9 +17,7 @@ You will need to have the database created on postgresql.
 4. Run `npm start` command
 
 ## summary of proposed changes / integrations (fb):
-- ormconfig.js instead .json: to hide secrets in .env
-- with graphql-tools: add `schema.ts` to make use of mockServer() to play with data on clientside
-TODO: run mockServer() on clientside ...
+- ormconfig.ts instead .json: to hide secrets in .env
 
 ## seed db
 npm run seed'
