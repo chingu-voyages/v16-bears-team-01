@@ -41,13 +41,12 @@ export const LoginForm = () => {
     <>
       <Form onSubmit={onSubmit} noValidate validated={validated}>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
           <Form.Control
             required
             name="email"
             value={values.email}
             type="email"
-            placeholder="Enter email"
+            placeholder="Email"
             onChange={onChange}
           />
           <Form.Control.Feedback type="invalid">
@@ -56,7 +55,6 @@ export const LoginForm = () => {
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
           <Form.Control
             required
             name="password"

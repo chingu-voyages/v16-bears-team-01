@@ -7,6 +7,8 @@ export const RegisterForm = (props: any) => {
   //const [errors, setErrors] = useState({});
 
   const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
     confirmpassword: ""
@@ -47,14 +49,41 @@ export const RegisterForm = (props: any) => {
   return (
     <>
       <Form onSubmit={onSubmit} noValidate validated={validated}>
+        <Row>
+          <Col>
+            <Form.Group controlId="formBasicFirstName">
+              <Form.Control
+                required
+                name="firstName"
+                value={values.firstName}
+                type="firstName"
+                placeholder="First Name"
+                onChange={onChange}
+              />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            </Form.Group>
+          </Col>
+          <Col>
+            <Form.Group controlId="formBasicLastName">
+              <Form.Control
+                required
+                name="lastName"
+                value={values.lastName}
+                type="lastName"
+                placeholder="Last Name"
+                onChange={onChange}
+              />
+              <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+            </Form.Group>
+          </Col>
+        </Row>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
           <Form.Control
             required
             name="email"
             value={values.email}
             type="email"
-            placeholder="Enter email"
+            placeholder="Email"
             onChange={onChange}
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -66,7 +95,6 @@ export const RegisterForm = (props: any) => {
           </Form.Text>
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
           <Form.Control
             required
             name="password"
@@ -81,7 +109,6 @@ export const RegisterForm = (props: any) => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group controlId="formBasicPasswordConfirm">
-          <Form.Label>Confirm Password</Form.Label>
           <Form.Control
             required
             name="confirmpassword"
@@ -102,17 +129,3 @@ export const RegisterForm = (props: any) => {
     </>
   );
 };
-
-/*
-
-<Row>
-          <Col>
-            <Form.Control placeholder="First name" />
-          </Col>
-          <Col>
-            <Form.Control placeholder="Last name" />
-          </Col>
-        </Row>
-        <Row>
-
-          */

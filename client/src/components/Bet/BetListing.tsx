@@ -8,22 +8,15 @@ import { getDayDdMonth, timeAgo } from '../../common/utils/DatetimeUtils';
 import { InputEvent } from '../../common/types'
 //import { BetEntry } from "./BetEntry";
 //import { DELETE_JOURNAL } from "../../api/bet_entry_mutation";
-import { data } from '../../example_data/bets';
 import './BetListing.css';
 
 export const BetListing = () => {
   //TODO: exchange props, respectively State in App with following:
   const [betText, setBetText] = useState(''); //TODO set to null
-  const [bets, setBets] = useState<any[]>(data);
   //bet Entry Modal
   const [entryShow, setEntryShow] = useState(false);
   const handleEntryClose = () => setEntryShow(false);
   const handleEntryShow = () => setEntryShow(true);
-  //const { loading, error, data } = useQuery(betQuery);
-  //if (loading) return <p>Loading...</p>;
-  //if (error) return <p>Error : </p>;
-  //and then ... data.bets.bap( ..=> ..)
-
   return (
     <>
       <Button 
@@ -35,36 +28,7 @@ export const BetListing = () => {
         new bet 
       </Button>
       <div className="DisplayList">
-        {data.length > 0 
-          ? data.map(({ id, goal, user, won, createdAt }) => (
-            <div 
-              key={id}
-              className="DisplayRow"
-            >
-              <div className="Text">{`... ${goal} !`}</div>
-              <div className="Text">{`by ${user}`}</div>
-              <div className="Text">
-                {`${getDayDdMonth(createdAt)} (${timeAgo(createdAt)})`}
-              </div>
-              {won &&
-                <div className="Text">'won'</div>
-              }
-                <Button
-                  onClick={() => {}}
-                  title="bet on the creator"
-                >
-                  + 
-                </Button>
-                <Button
-                  onClick={() => {}}
-                  title="bet against the creator"
-                >
-                 - 
-                </Button>
-              </div>
-            ))
-          : <div className="Text">"No Bets placed..."</div>
-        }
+        <div className="Text">"No Bets placed..."</div>
       </div>
 
       <Modal show={entryShow} onHide={handleEntryClose}>
@@ -80,36 +44,6 @@ export const BetListing = () => {
               setBetText(e.target.value);
             }}
           />
-          <Button
-            onClick={() => {
-              if (betText !== '') {
-                setBets([
-                  ...bets,
-                  {
-                    id: bets[bets.length-1].id,
-                    goal: betText,
-                    user: 'Chingu',
-                    on: [],
-                    visibility: 'global',
-                    createdAt: new Date(),
-                  }
-                ]);  
-                setBetText('');
-              }
-            }}
-            title="Are you sure? - Release your Bet to the wild"
-          >
-            I bet!
-          </Button>
-          <Button
-            onClick={() => {
-              setBets([]);
-              setBetText('');
-            }}
-            title="clear bets"
-          >
-            reset 
-          </Button>
         </Modal.Body>
       </Modal>
     </>
