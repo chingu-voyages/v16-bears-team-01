@@ -3,7 +3,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Typesccript <br />
 
 ## Installation
-in root-dir [v16-bears-team-01/client/ibetiwill]:
 ```
 npm install
 ```
