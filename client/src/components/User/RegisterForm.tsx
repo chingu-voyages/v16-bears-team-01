@@ -1,5 +1,5 @@
-import React, { useState, useRef } from "react";
-import { Button, Row, Col, Form, Modal } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Row, Col, Form } from "react-bootstrap";
 import { useMutation } from "@apollo/react-hooks";
 import { REGISTER_USER } from "../../api/register_mutation";
 
@@ -25,7 +25,7 @@ export const RegisterForm = (props: any) => {
     e.preventDefault();
 
     const form = e.currentTarget;
-    if (form.checkValidity() == false) {
+    if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
     }

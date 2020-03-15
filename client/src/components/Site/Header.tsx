@@ -4,8 +4,6 @@ import { Navbar, Nav, Modal } from "react-bootstrap";
 
 import { LoginForm } from "../User/LoginForm";
 import { RegisterForm } from "../User/RegisterForm";
-import { gql } from "apollo-boost";
-import { useQuery } from '@apollo/react-hooks';
 
 export function HeaderSection() {
   //login modal

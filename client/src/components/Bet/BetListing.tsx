@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useQuery, useMutation } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
+//import { useQuery, useMutation } from "@apollo/react-hooks";
+//import { gql } from "apollo-boost";
 import { Button, Modal } from "react-bootstrap";
 
-import { HeaderSection } from "../Site/Header";
-import { getDayDdMonth, timeAgo } from '../../common/utils/DatetimeUtils';
+//import { HeaderSection } from "../Site/Header";
+//import { getDayDdMonth, timeAgo } from '../../common/utils/DatetimeUtils';
 import { InputEvent } from '../../common/types'
 //import { BetEntry } from "./BetEntry";
 //import { DELETE_JOURNAL } from "../../api/bet_entry_mutation";

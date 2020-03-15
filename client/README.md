@@ -2,37 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Typesccript <br />
 
-<details><summary>some React principles</summary>
-
-### DOM as function of State
-- A React component basically returns the DOM / html given the State as input.
-- ie: ReactComponent = appState => jsx / html
-
-### Unidirectional data flow
-- All State is stored in the Top-Component. 
-- Stateful Components are either Classes or Functions with hooks.
-- State is passed to (presentational) child Components via Props.
-- Presentational Components are Functions.
-- (it integrates nicely with Redux if needed later - ie state gets more complex)
-
-### Best Practice
-- Small / Single Purpose Components
-- keep State simpel, derive/calculate as much as possible
-- create copies of iterables or Objects, never manipulate State inplace.
-eg:
-state = [1,2,3];
-newState = [...state, 4, 5];
-
-</details>
-
-<details><summary>heavily used es6 / ts-features</summary>
-- decomposition<br />
-- arrow-synthax<br />
-- array.map()<br />
-- object.assign() and ...spread<br />
-</details>
-
-
 ## Installation
 in root-dir [v16-bears-team-01/client/ibetiwill]:
 ```
@@ -97,9 +66,3 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 </p>
 </details>
-
-## Testing 
-We should try to keep up with testing:). 
-I already have some good experience with:
-[Jest](https://jestjs.io/) for the 'normal' code - eg Utils.ts ...
-[Enzyme](https://airbnb.io/enzyme/) for the React-Components - eg testing most relevant features of App.tsx

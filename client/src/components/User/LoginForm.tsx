@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { LOGIN_USER } from "../../api/login_mutation";
 import { useMutation } from "@apollo/react-hooks";
 
@@ -20,7 +20,7 @@ export const LoginForm = () => {
     e.preventDefault();
 
     const form = e.currentTarget;
-    if (form.checkValidity() == false) {
+    if (form.checkValidity() === false) {
       e.preventDefault();
       e.stopPropagation();
       setValidated(true);
